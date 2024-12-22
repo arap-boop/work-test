@@ -9,7 +9,6 @@ export function CardInterest() {
   const [profile, setProfile] = React.useState<Profile | null>(null);
 
   React.useEffect(() => {
-    // Fetch profile data
     fetch("/api/profile", {
       method: "GET",
       headers: {
@@ -18,7 +17,6 @@ export function CardInterest() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.data, "Profile Data");
         setProfile(data.data);
       })
       .catch((error) => {
@@ -37,7 +35,7 @@ export function CardInterest() {
           className="flex justify-between"
         >
           <h1 className="text-xl font-bold">Interest</h1>
-          <Image src="/Edit.svg" alt="Edit" width={20} height={20} />
+          <Image src="/edit.svg" alt="Edit" width={20} height={20} />
         </div>
       </CardHeader>
       <CardContent>

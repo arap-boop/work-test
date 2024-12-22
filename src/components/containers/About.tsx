@@ -135,15 +135,15 @@ const About: React.FC<AboutProps> = ({ onSubmit }) => {
             <select
               value={gender}
               onChange={(e) => setGender(e.target.value)}
-              className="w-full rounded-lg border border-[#D9D9D90F] bg-white/10 px-3 py-2 text-white/40 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full rounded-lg border border-[#D9D9D90F] bg-white/10 px-3 py-2 text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
-              <option className="bg-white/10" value="" disabled selected>
+              <option className="bg-black" value="DEFAULT" disabled>
                 Select Gender
               </option>
-              <option className="bg-white/10" value="male">
+              <option className="bg-black text-white" value="male">
                 Male
               </option>
-              <option className="bg-white/10" value="female">
+              <option className="bg-black text-white" value="female">
                 Female
               </option>
             </select>

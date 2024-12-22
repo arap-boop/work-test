@@ -2,9 +2,6 @@ import { parse } from "cookie";
 
 export default async function handler(req: any, res: any) {
   try {
-    console.log("Request Body:", req.body);
-    console.log("Interests Received:", req.body.interests);
-
     const cookies = req.headers.cookie ? parse(req.headers.cookie) : {};
     const accessToken = cookies.access_token;
 
@@ -30,7 +27,6 @@ export default async function handler(req: any, res: any) {
     );
 
     const backendResponse = await response.json();
-    console.log("Backend Response:", backendResponse);
 
     if (!response.ok) {
       throw new Error(

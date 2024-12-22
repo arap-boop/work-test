@@ -54,9 +54,7 @@ const Signup = () => {
       email: email,
       password: "",
     },
-    // validationSchema: validationSchema,
     onSubmit: async (values) => {
-      console.log(values, "val");
       const body = {
         username,
         email,
@@ -74,7 +72,6 @@ const Signup = () => {
         });
 
         const data = await response.json();
-        console.log(data);
       } catch (error) {
         console.error("Registration failed:", error);
         toast.error("Registration failed. Please try again.");

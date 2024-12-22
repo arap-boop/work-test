@@ -38,8 +38,6 @@ export function CardAbout() {
       .then((res) => res.json())
       .then((data) => {
         if (data) {
-          console.log(data, "DATA");
-
           setProfileData(data);
           setName(data.data.name || "");
           setBirthday(data.data.birthday || "");
@@ -73,7 +71,6 @@ export function CardAbout() {
     })
       .then((res) => res.json())
       .then((response) => {
-        console.log("Profile successfully saved:", response);
         setIsEditing(false);
       })
       .catch((error) => {
@@ -106,7 +103,7 @@ export function CardAbout() {
           ) : (
             <Image
               onClick={() => setIsEditing(true)}
-              src="/Edit.svg"
+              src="/edit.svg"
               alt="Edit"
               width={20}
               height={20}

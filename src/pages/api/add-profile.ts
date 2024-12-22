@@ -2,8 +2,6 @@ import { parse } from "cookie";
 
 export default async function handler(req: any, res: any) {
   try {
-    console.log("Request Body:", req.body);
-
     const cookies = req.headers.cookie ? parse(req.headers.cookie) : {};
     const accessToken = cookies.access_token;
 
@@ -26,7 +24,6 @@ export default async function handler(req: any, res: any) {
     }
 
     const profileData = await response.json();
-    console.log("API Response:", profileData);
 
     res.status(200).json(profileData);
   } catch (error) {

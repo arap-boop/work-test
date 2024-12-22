@@ -19,7 +19,6 @@ const Interest = () => {
   }, [tags, setInterests]);
   const handleSubmit = () => {
     if (tags.length === 0) {
-      console.log("Please select at least one interest.");
       return;
     }
 
@@ -37,7 +36,6 @@ const Interest = () => {
     })
       .then((res) => res.json())
       .then((response) => {
-        console.log("Profile successfully saved:", response);
         if (response.horoscope) {
           setHoroscope(response.horoscope);
         }

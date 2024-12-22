@@ -114,8 +114,8 @@ const ProfilePage = () => {
                 <span className="ml-1">{calculateAge(profile?.birthday)}</span>
               )}
               <div>{gender || profile?.gender}</div>
-              <div className="flex w-full gap-4">
-                <h1 className="flex items-center gap-2 rounded-lg bg-[#FFFFFF0F]/5 px-3 py-1 backdrop-blur-lg">
+              <div className="mt-1 flex w-full gap-4">
+                <h1 className="flex items-center gap-2 rounded-lg bg-black/70 px-3 py-1">
                   {zodiacs?.zodiacImage ? (
                     <Image
                       src={zodiacs.zodiacImage}
@@ -128,7 +128,7 @@ const ProfilePage = () => {
                   )}
                   {profile.horoscope}
                 </h1>
-                <p className="flex items-center gap-2 rounded-lg bg-[#FFFFFF0F]/5 px-3 py-1 backdrop-blur-lg">
+                <p className="flex items-center gap-2 rounded-lg bg-black/70 px-3 py-1 backdrop-blur-lg">
                   {sign?.signImage ? (
                     <Image
                       src={sign.signImage}
